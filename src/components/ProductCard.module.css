@@ -1,0 +1,11 @@
+.card{min-width:0}
+.link{display:block;text-decoration:none;color:var(--brand);height:100%}
+.media{overflow:hidden;border-radius:16px;background:var(--cream)}
+.media>div{transition:transform .35s ease}
+.link h3{font-size:clamp(22px,2vw,28px);font-weight:750;line-height:1.2;letter-spacing:-.03em;margin:20px 0 10px}
+.link p{font-size:18px;line-height:1.5;margin:0 0 12px;color:var(--ink)}
+.link p strong{font-weight:700}
+.action{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:700;min-height:44px}
+.action svg{width:20px;height:20px}
+@media(hover:hover){.link:hover .media>div{transform:scale(1.025)}}
+@media(prefers-reduced-motion:reduce){.media>div{transition:none}}

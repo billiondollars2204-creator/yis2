@@ -1,0 +1,77 @@
+/* Latest approved reference: 1024 px wide, 54 px header, 432 px hero. */
+.hero {
+  position: relative;
+  width: 100%;
+  container-type: inline-size;
+  isolation: isolate;
+  aspect-ratio: 64 / 27;
+  overflow: hidden;
+  color: #0029ae;
+  background: #ffe16b;
+}
+.media { position: absolute; inset: 0; z-index: -1; }
+.photo { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.media picture { display: block; width: 100%; height: 100%; }
+.copy {
+  position: relative;
+  width: 100%;
+  padding-top: 2.4cqw;
+  text-align: center;
+}
+.copy h1 {
+  font-family: var(--font-display);
+  font-size: 6.9cqw;
+  font-weight: 800;
+  letter-spacing: -.055em;
+  line-height: .98;
+  color: inherit;
+  margin: 0 0 1.2cqw;
+}
+.copy h1 span { display: block; }
+.sub {
+  font-family: var(--font-ui);
+  font-size: clamp(20px, 1.8cqw, 28px);
+  font-weight: 650;
+  letter-spacing: -.012em;
+  line-height: 1.5;
+  margin: 0 0 1.3cqw;
+}
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.1cqw;
+  min-height: 48px;
+  height: 3.9cqw;
+  min-width: 168px;
+  width: 16.6cqw;
+  border-radius: 999px;
+  background: #0029b5;
+  color: #fff;
+  font-family: var(--font-ui);
+  font-size: max(18px, 1.3cqw);
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+  border: 1px solid #00208a;
+  box-shadow: 0 3px 0 #001865;
+  line-height: 1;
+  text-decoration: none;
+  transition: background 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+.cta svg { width: max(16px, 1.6cqw); height: max(16px, 1.6cqw); }
+.cta:hover { background: #001c86; transform: translateY(1px); box-shadow: 0 2px 0 #001865; }
+.cta:active { transform: translateY(3px); box-shadow: 0 0 0 #001865; }
+.cta:focus-visible { outline: 3px solid #0029b5; outline-offset: 5px; }
+
+@media (max-width: 699px) {
+  .hero { aspect-ratio: 4 / 5; min-height: 490px; }
+  .copy { padding: 30px 16px 0; }
+  .copy h1 { font-size: clamp(36px, 10.7vw, 68px); line-height: 1.02; margin-bottom: 14px; }
+  .sub { max-width: 330px; margin: 0 auto 18px; font-size: 19px; line-height: 1.45; }
+  .cta { width: 180px; height: 48px; gap: 12px; font-size: 16px; }
+  .cta svg { width: 18px; height: 18px; }
+  .media { position: absolute; inset: 0; }
+  .photo { object-position: center bottom; }
+}
+@media (prefers-reduced-motion: reduce) { .cta { transition: none; } }

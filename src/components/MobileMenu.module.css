@@ -1,0 +1,72 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--brand);
+}
+.body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--sp-4) var(--sp-5) var(--sp-7);
+}
+.label {
+  margin: 0 0 var(--sp-2);
+  font-size: var(--fs-12);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.list,
+.more {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  min-height: 56px;
+  border-bottom: 1px solid var(--line);
+  font-weight: 600;
+  text-decoration: none;
+}
+.list small {
+  display: block;
+  font-weight: 400;
+  font-size: var(--fs-12);
+  color: var(--ink-2);
+}
+.list svg {
+  width: 18px;
+  height: 18px;
+  color: var(--ink-3);
+}
+.custom {
+  display: grid;
+  gap: 2px;
+  margin: var(--sp-5) 0;
+  padding: var(--sp-4);
+  border-radius: var(--r-md);
+  background: var(--peacock-tint);
+  text-decoration: none;
+}
+.custom strong {
+  color: var(--peacock);
+}
+.custom span {
+  font-size: var(--fs-14);
+  color: var(--ink-2);
+}
+.more a {
+  display: block;
+  padding: 10px 0;
+  color: var(--ink-2);
+  text-decoration: none;
+}

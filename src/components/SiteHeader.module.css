@@ -1,0 +1,264 @@
+.topbar {
+  background: var(--brand);
+  color: #fff;
+  font-size: var(--fs-12);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.topInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-6);
+  min-height: 32px;
+}
+.topInner p {
+  margin: 0;
+}
+.topInner a {
+  color: #fff;
+  font-weight: 700;
+}
+.topInner a:focus-visible {
+  outline-color: #fff;
+}
+.topMore {
+  display: none;
+}
+@media (min-width: 900px) {
+  .topMore {
+    display: block;
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 252, 247, 0.97);
+  backdrop-filter: saturate(1.3) blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.bar {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  height: var(--header-h);
+}
+.menuBtn {
+  margin-left: -10px;
+}
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 1.2rem + 0.6vw, 1.65rem);
+  line-height: 1;
+  color: var(--brand);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.mark {
+  width: 12px;
+  height: 12px;
+  background: var(--marigold);
+  transform: rotate(45deg);
+  box-shadow: 0 0 0 3px var(--marigold-tint);
+}
+.search {
+  display: none;
+  flex: 1;
+  align-items: center;
+  gap: 10px;
+  max-width: 560px;
+  height: 44px;
+  margin-inline: auto;
+  padding: 0 16px;
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  color: var(--ink-2);
+  font: 400 var(--fs-16) var(--font-ui);
+  text-align: left;
+  cursor: text;
+  transition: border-color var(--t-fast) ease, box-shadow var(--t-fast) ease;
+}
+.search:hover {
+  border-color: var(--ink-2);
+}
+.search svg {
+  width: 20px;
+  height: 20px;
+  color: var(--ink);
+}
+.actions {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: -10px;
+}
+.hideSm {
+  display: none !important;
+}
+.bump {
+  animation: bump 380ms var(--ease);
+}
+@keyframes bump {
+  40% {
+    transform: scale(1.3);
+  }
+}
+
+.nav {
+  display: none;
+  border-top: 1px solid var(--line);
+}
+.cats {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cats a {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  height: 46px;
+  padding: 0 12px;
+  align-items: center;
+  font-size: var(--fs-14);
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--ink);
+}
+.cats a .hindi {
+  font-size: var(--fs-14);
+}
+.cats a::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: -1px;
+  height: 3px;
+  border-radius: 3px 3px 0 0;
+  background: var(--brand);
+  transform: scaleX(0);
+  transition: transform var(--t-base) var(--ease);
+}
+.cats a:hover::after {
+  transform: scaleX(1);
+  background: var(--line-2);
+}
+.cats a[aria-current="page"] {
+  color: var(--brand);
+}
+.cats a[aria-current="page"]::after {
+  transform: scaleX(1);
+  background: var(--brand);
+}
+.sep {
+  width: 1px;
+  height: 20px;
+  margin-inline: var(--sp-2);
+  background: var(--line-2);
+}
+.custom {
+  color: var(--peacock) !important;
+}
+.custom::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  margin-right: 2px;
+  background: var(--peacock);
+  border-radius: 50%;
+}
+
+@media (min-width: 1024px) {
+  .menuBtn,
+  .searchIcon {
+    display: none !important;
+  }
+  .search {
+    display: flex;
+  }
+  .hideSm {
+    display: inline-grid !important;
+  }
+  .nav {
+    display: block;
+  }
+}
+
+/* Coral storefront header */
+.topbar{background:#452331}.topMore{display:none!important}.header{background:#fff9ef;backdrop-filter:none}.bar{height:76px;max-width:1400px}.logo{font-weight:700;letter-spacing:-.05em;font-size:31px;color:#452331}.primary{display:flex;gap:32px;margin-left:auto;margin-right:28px;font-size:14px;font-weight:550}.primary a{text-decoration:none}.primary a:hover{text-decoration:none;text-underline-offset:5px}.search{display:none!important}.searchIcon{display:inline-grid!important}.actions{margin-left:0}.nav{display:none!important}.hideSm{display:none!important}.menuBtn{display:none!important}@media(max-width:699px){.bar{height:64px;gap:8px}.logo{font-size:25px}.primary{display:none}.actions{margin-left:auto}.menuBtn{display:inline-grid!important}}
+
+/* Product-first navigation, with Immunitywize's cobalt and cream palette. */
+.spoon { width: 44px; height: 32px; flex-shrink: 0; }
+.bagLabel { white-space: nowrap; }
+.referenceHeader { background: #fffdf7; border-bottom: 1px solid #e4e4d9; color: #0029ae; }
+.referenceHeader .bar {
+  height: 84px; max-width: 1600px; width: 100%; padding: 0 3.7%;
+  display: grid; grid-template-columns: 1fr auto 1fr; gap: 24px;
+}
+.referenceHeader .logo {
+  grid-column: 2; grid-row: 1; color: #0029ae; font-family: var(--font-display);
+  font-size: clamp(25px, 2.2vw, 33px); font-weight: 800; letter-spacing: -.06em; gap: 5px;
+}
+.referenceHeader .logo img { display: block; width: 108px; height: auto; }
+.referenceHeader .bar { height: 80px; }
+.referenceHeader .primary {
+  grid-column: 1; grid-row: 1; margin: 0; gap: 20px; align-items: center;
+  font: 650 18px/1.3 var(--font-ui);
+}
+.referenceHeader .primary > a { padding-block: 14px; }
+.referenceHeader .actions { grid-column: 3; grid-row: 1; justify-self: end; margin: 0; gap: 14px; }
+.referenceHeader .actions button { color: #0029ae; width: auto; min-width: 44px; min-height: 44px; display: flex; gap: 8px; padding: 10px; border-radius: 999px; }
+.referenceHeader .actions button:last-child { border: 1px solid #0029ae; padding-inline: 18px; }
+.referenceHeader .actions button:hover { background: #efefde; }
+.referenceHeader .bagLabel { font: 650 17px/1 var(--font-ui); }
+.referenceHeader .search { display: none!important; }
+.referenceHeader .searchIcon { display: flex!important; }
+.shopNavigation { position: relative; }
+.shopTrigger { display: flex; align-items: center; gap: 7px; min-height: 44px; padding: 0; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; }
+.shopTrigger svg { width: 16px; height: 16px; transition: transform 160ms ease; }
+.shopTrigger[aria-expanded=true] svg { transform: rotate(180deg); }
+.shopTrigger:hover { text-decoration: none; text-underline-offset: 5px; }
+.shopPanel { position: absolute; top: calc(100% + 20px); left: -20px; display: grid; grid-template-columns: 230px 270px; background: #fffdf7; border: 1px solid #dddccd; border-radius: 12px; overflow: hidden; box-shadow: 0 14px 28px #001d4420; }
+.shopIntro { padding: 28px; background: #fff0a6; display: flex; flex-direction: column; gap: 20px; }
+.shopIntro p { margin: 0; font-size: 10px; font-weight: 700; letter-spacing: .08em; }
+.shopIntro strong { font-size: 25px; line-height: 1.15; letter-spacing: -.04em; }
+.shopIntro a { display: flex; align-items: center; gap: 10px; margin-top: auto; }
+.shopPanel svg { width: 18px; height: 18px; }
+.shopLinks { padding: 16px 24px; }
+.shopLinks a { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; border-bottom: 1px solid #e7e4da; }
+.shopLinks a:last-child { border-bottom: 0; }
+.shopLinks :global(.hindi) { font-size: 15px; font-weight: 400; opacity: .7; }
+@media(max-width: 1023px) {
+  .referenceHeader .bar { height: 72px; grid-template-columns: 44px 1fr auto; gap: 12px; }
+  .referenceHeader .menuBtn { display: inline-grid!important; grid-column: 1; grid-row: 1; color: #0029ae; }
+  .referenceHeader .primary { display: none; }
+  .referenceHeader .logo { justify-self: center; }
+  .referenceHeader .logo img { width: 96px; }
+  .referenceHeader .actions { gap: 4px; }
+  .referenceHeader .bagLabel { display: none; }
+  .referenceHeader .actions button:last-child { border: 0; padding: 10px; }
+}
+@media(max-width: 699px) {
+  .referenceHeader .bar { height: 64px; padding: 0 12px; gap: 4px; }
+  .referenceHeader .logo { font-size: 23px; gap: 3px; }
+  .referenceHeader .logo img { width: 84px; }
+  .referenceHeader .spoon { width: 29px; height: 27px; }
+  .referenceHeader .actions { gap: 0; }
+}
+@media(max-width: 359px) {
+  .referenceHeader .logo { font-size: 21px; }
+  .referenceHeader .spoon { display: none; }
+}
+@media(prefers-reduced-motion: reduce) { .shopTrigger svg { transition: none; } }
+@media(min-width:1024px){.referenceHeader .actions :global(.count-badge){display:none}}

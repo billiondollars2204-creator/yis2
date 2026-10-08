@@ -1,0 +1,129 @@
+.lines {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.line {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: var(--sp-4);
+  padding-block: var(--sp-4);
+  border-bottom: 1px solid var(--line);
+}
+.lines[data-compact] .line {
+  grid-template-columns: 72px 1fr;
+}
+.thumb {
+  display: block;
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sp-3);
+}
+.name {
+  margin: 0;
+  font-size: var(--fs-16);
+}
+.name a {
+  text-decoration: none;
+}
+.name a:hover {
+  color: var(--brand);
+}
+.total {
+  margin: 0;
+  font-weight: 700;
+  white-space: nowrap;
+  text-align: right;
+}
+.total s {
+  display: block;
+  font-size: var(--fs-12);
+  font-weight: 400;
+}
+.meta {
+  margin: 2px 0 0;
+  font-size: var(--fs-14);
+  color: var(--ink-2);
+}
+.sub {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0 0;
+  font-size: var(--fs-12);
+  font-weight: 600;
+  color: var(--marigold-ink);
+}
+.sub svg {
+  width: 14px;
+  height: 14px;
+}
+.custom {
+  margin-top: var(--sp-2);
+  padding: var(--sp-2) var(--sp-3);
+  border-left: 3px solid var(--peacock);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+  background: var(--peacock-tint);
+  font-size: var(--fs-12);
+  color: var(--ink-2);
+}
+.custom ul {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.custom li[data-kind="more"] strong,
+.custom li[data-kind="added"] strong {
+  color: var(--peacock);
+}
+.custom li[data-kind="less"] strong,
+.custom li[data-kind="removed"] strong {
+  color: var(--danger);
+}
+.custom p {
+  margin: 4px 0 0;
+}
+.edit {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 6px;
+  font-weight: 700;
+  color: var(--peacock);
+}
+.edit svg {
+  width: 13px;
+  height: 13px;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  margin-top: var(--sp-3);
+}
+.remove {
+  min-height: 40px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: var(--fs-14);
+  color: var(--ink-2);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.remove:hover {
+  color: var(--danger);
+}
+.info {
+  min-width: 0;
+  display: grid;
+  align-content: start;
+  gap: 4px;
+}

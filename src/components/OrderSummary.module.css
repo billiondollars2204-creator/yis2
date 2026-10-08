@@ -1,0 +1,50 @@
+.summary {
+  padding: var(--sp-5);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+}
+.title {
+  margin-bottom: var(--sp-4);
+  font-family: var(--font-ui);
+  font-size: var(--fs-18);
+  font-weight: 700;
+}
+.rows {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 var(--sp-4);
+  font-size: var(--fs-14);
+}
+.rows div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sp-3);
+}
+.rows dt {
+  color: var(--ink-2);
+}
+.rows dd {
+  margin: 0;
+}
+.save dd,
+.save dt {
+  color: var(--peacock) !important;
+  font-weight: 600;
+}
+.total {
+  margin-top: 6px;
+  padding-top: var(--sp-3);
+  border-top: 1px dashed var(--line-2);
+  font-size: var(--fs-18);
+  font-weight: 700;
+}
+.total dt {
+  color: var(--ink) !important;
+}
+.total dt span {
+  display: block;
+  font-size: var(--fs-12);
+  font-weight: 400;
+  color: var(--ink-2);
+}
